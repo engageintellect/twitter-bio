@@ -1,4 +1,4 @@
-# [TwitterBio.com](https://www.twitterbio.com/)
+# twitter-bio
 
 This project generates Twitter bios for you using AI.
 
