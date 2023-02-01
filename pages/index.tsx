@@ -91,13 +91,9 @@ const Home: NextPage = () => {
         <p className="text-slate-500 mt-5">18,167 bios generated so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
-              alt="1 icon"
-              className="mb-5 sm:mb-0"
-            />
+            <div className="bg-slate-900 p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center">
+              <div className="text-white absolute">1</div>
+            </div>
             <p className="text-left font-medium">
               Copy your current bio{" "}
               <span className="text-slate-500">
@@ -116,7 +112,9 @@ const Home: NextPage = () => {
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
+            <div className="bg-slate-900 p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center">
+              <div className="text-white absolute">2</div>
+            </div>
             <p className="text-left font-medium">Select your vibe.</p>
           </div>
           <div className="block">
