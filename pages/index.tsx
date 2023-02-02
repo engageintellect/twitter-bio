@@ -70,33 +70,35 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>Twitter Generator</title>
+        <title>twitter-bio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         <a
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
+          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 dark:text-gray-900 shadow-md transition-colors hover:bg-gray-100 mb-5"
           href="https://github.com/engageintellect/twitter-bio"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github />
+          <Github className="" />
           <p>Star on GitHub</p>
         </a>
-        <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
+        <h1 className="sm:text-6xl dark:text-white text-4xl max-w-2xl font-bold text-slate-900">
           Generate your next Twitter bio in seconds
         </h1>
-        <p className="text-slate-500 mt-5">18,167 bios generated so far.</p>
+        <p className="text-slate-500 mt-5 dark:text-gray-50">
+          18,167 bios generated so far.
+        </p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            <div className="bg-slate-900 p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center">
+            <div className="bg-black p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center dark:text-white">
               <div className="text-white absolute">1</div>
             </div>
             <p className="text-left font-medium">
               Copy your current bio{" "}
-              <span className="text-slate-500">
+              <span className="text-slate-500 dark:text-gray-200">
                 (or write a few sentences about yourself)
               </span>
               .
@@ -106,13 +108,13 @@ const Home: NextPage = () => {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
-            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+            className="w-full rounded-md text-gray-900 border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "e.g. Developer from Orange County, CA. Tweeting about web development, AI, and React / Next.js."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-            <div className="bg-slate-900 p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center">
+            <div className="bg-black p-[1rem] rounded-full text-lg font-thin text-white relative flex items-center justify-center">
               <div className="text-white absolute">2</div>
             </div>
             <p className="text-left font-medium">Select your vibe.</p>
@@ -123,7 +125,7 @@ const Home: NextPage = () => {
 
           {!loading && (
             <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              className="bg-black text-lg rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
               Generate your bio &rarr;
@@ -150,11 +152,11 @@ const Home: NextPage = () => {
               {generatedBios && (
                 <>
                   <div>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
+                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 dark:text-white mx-auto">
                       Your generated bios
                     </h2>
                   </div>
-                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto text-gray-900">
                     {generatedBios
                       .substring(generatedBios.indexOf("1") + 3)
                       .split("2.")

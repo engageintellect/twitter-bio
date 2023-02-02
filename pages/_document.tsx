@@ -3,7 +3,10 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html
+        lang="en"
+        className="dark:bg-gradient-to-b dark:from-slate-800 dark:to-sky-900 dark:text-white"
+      >
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
