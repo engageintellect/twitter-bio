@@ -19,3 +19,5 @@ Then, run the application in the command line and it will be available at `http:
 ```bash
 npm run dev
 ```
+
+**Note:** You'll also need to add your OpenAI API key in an env variable somewhere.
